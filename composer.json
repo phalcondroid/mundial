@@ -1,6 +1,6 @@
 {
     "require": {
-        "vlucas/spot2": "^1.0"
+        "vlucas/spot2": "^2.0.4"
     },
     "config" : {
         "vendor-dir" : "libs"
