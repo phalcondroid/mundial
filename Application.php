@@ -15,6 +15,9 @@ class Application
         include_once __DIR__ . "/controller/$controller" . "Controller.php";
         $class  = "\Mundial\Controller\\$controller" . "Controller";
         $method = "$action" . "Action";
-        (new $class($spot))->$method();
+        $controllerCreated = new $class($spot);
+        $controllerCreated->$method();
+        $view = $controllerCreated->getView();
+        include_once __DIR__ . "/view/$action.php";
     }
 }
